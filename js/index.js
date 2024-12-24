@@ -7,14 +7,17 @@ if (!userStr?.trim() || !userChar?.trim()) {
     alert("помилка: введіть рядок та мінімум один символ");
 }
 else {
-    userChar = userChar.split("").map(char => char.trim());
     const userResult = getStrCharRemove(userStr, userChar);
-
     alert(userResult);
 }
 
-function getStrCharRemove(dataStr, arrCharRemove) {
-    
+function getStrCharRemove(dataStr, charRemove) {
+    const arrCharRemove = [];
+
+    for(let j = 0; j < charRemove.length; j++) {  
+        arrCharRemove.push(charRemove[j].trim()); // видаляє можливий пробіл із символів, щоб результуючий рядок був вигляду: (heo wor, а не heowor)
+    }
+
     let result = dataStr.split("");
     let i = 0;
 
