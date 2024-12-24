@@ -1,14 +1,14 @@
 'use strict';
 
 const userStr = prompt("введіть рядок");
-let userArrChar = prompt("введіть символ(и), для видалення із рядка");
+let useChar = prompt("введіть символ(и), для видалення із рядка");
 
-if (!userStr?.trim() || !userArrChar?.trim()) {
+if (!userStr?.trim() || !useChar?.trim()) {
     alert("помилка: введіть рядок та мінімум один символ");
 }
 else {
-    userArrChar = userArrChar.split("").map(char => char.trim());
-    const userResult = getStrCharRemove(userStr, userArrChar);
+    useChar = useChar.split("").map(char => char.trim());
+    const userResult = getStrCharRemove(userStr, useChar);
 
     alert(userResult);
 }
