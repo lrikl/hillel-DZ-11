@@ -4,7 +4,7 @@ const userStr = prompt("введіть рядок");
 const userChar = prompt("введіть символ(и), для видалення із рядка");
 
 if (!userStr?.trim() || !userChar?.trim()) {
-    alert("помилка: введіть рядок та мінімум один символ");
+    alert("треба заповнити всі поля, спробуйте ще раз");
 }
 else {
     const userResult = getStrCharRemove(userStr, userChar);
